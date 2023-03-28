@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e9c0ddda.css",
+    "main.js": "/static/js/main.a308b828.js",
+    "static/js/27.b78f48ef.chunk.js": "/static/js/27.b78f48ef.chunk.js",
+    "static/media/tea.png": "/static/media/tea.2b4f2639a421ad8c19ff.png",
+    "static/media/carrefour.png": "/static/media/carrefour.952ae301cefff436cb9e.png",
+    "static/media/Fontspring-DEMO-cerapro-regular.otf": "/static/media/Fontspring-DEMO-cerapro-regular.bed562eda7457ec36333.otf",
+    "static/media/tea-bag.png": "/static/media/tea-bag.028dd2bf13b4db82af59.png",
+    "static/media/background.png": "/static/media/background.c2c38124908266fb1703.png",
+    "static/media/fair.png": "/static/media/fair.c8ba8741e456226d29a4.png",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.e9c0ddda.css",
+    "static/js/main.a308b828.js"
+  ]
+}
