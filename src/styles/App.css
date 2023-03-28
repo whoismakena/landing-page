@@ -1,0 +1,306 @@
+.App {
+  font-family: "Cera-Pro";
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.Flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column !important;
+}
+
+.App-Container {
+  min-height: 100vh;
+  color: #f4f9f9;
+}
+
+.App-Container h1 {
+  font-size: 2.4em;
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 18px;
+  color: #f4f9f9;
+  text-align: right;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+}
+
+.Header span {
+  margin-right: 1.5em;
+  cursor: pointer;
+  color: #f4f9f9;
+}
+
+.Header span:hover {
+  color: #527da3;
+}
+
+.Content {
+  min-height: 100vh;
+  background-image: url("../assets/background.png");
+  background-size: cover;
+}
+
+.Details-Container {
+  color: #f4f9f9;
+  padding: 5em;
+  display: flex;
+  align-items: center;
+}
+
+.Title {
+  font-size: 4em;
+  display: block;
+  font-weight: bold;
+}
+
+.Subtitle {
+  font-size: 2em;
+  display: block;
+}
+
+.Tea {
+  color: #2ec2e2;
+}
+
+.Tea-Desc {
+  display: block;
+  font-weight: bold;
+  line-height: 1.8em;
+  text-align: justify;
+  font-size: 16px;
+}
+
+.Product-Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Product-Container img {
+  height: auto;
+  width: 35em;
+  animation: fade-right 1s ease-in;
+}
+
+.Tag {
+  min-height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fade-bottom 1s ease-in;
+}
+
+.Tag span {
+  font-size: 2em;
+  margin: 0 1.5em;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  letter-spacing: 0.2em;
+}
+
+.About {
+  padding: 5em;
+}
+
+.About span {
+  margin-top: 10px;
+}
+
+.Stats {
+  background-color: #2ec2e2;
+  background-image: linear-gradient(#0e1116, #2ec2e2);
+  min-height: 20em;
+  display: block;
+  animation: fade-bottom 1s ease-in;
+}
+
+.Stats-Grid div {
+  justify-content: space-around;
+}
+
+.Stats span {
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.Stats img {
+  height: 3em;
+  width: 3em;
+  margin-bottom: 1em;
+}
+
+.Number {
+  font-size: 60px !important;
+  font-weight: bold !important;
+}
+
+.Outlets {
+  margin-top: 8em;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10em !important;
+}
+
+.Outlets img {
+  background-color: #ffffff;
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.Contact {
+  padding: 5em;
+}
+
+.Contact div {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f9f9;
+  color: #0e1116;
+  height: 55px;
+  width: 30%;
+  border-radius: 5px;
+}
+
+.Contact span {
+  font-size: 15px !important;
+}
+
+.Contact input {
+  height: 90%;
+  width: 70%;
+  padding-left: 10px;
+  border: none !important;
+  background-color: transparent;
+}
+
+.Contact input:focus-visible {
+  outline: none !important;
+}
+
+.Contact-Button {
+  background-color: #0e1116 !important;
+  width: 30% !important;
+  color: #f4f9f9 !important;
+  cursor: pointer;
+  border-radius: 0px 5px 5px 0px !important;
+}
+
+.Footer {
+  font-size: 14px;
+  padding: 10px 20px;
+  text-align: right;
+}
+
+@media only screen and (max-width: 780px) {
+  .App-Container h1 {
+    font-size: 2em;
+  }
+
+  .Header {
+    background-color: #0e1116;
+    margin-right: 10px;
+  }
+
+  .Header span {
+    color: #f4f9f9;
+  }
+
+  .Details-Container {
+    padding: 0px;
+    margin-top: 60px !important;
+  }
+
+  .Title {
+    font-size: 3.5em;
+  }
+
+  .Subtitle {
+    font-size: 1.5em;
+  }
+
+  .Details-Container div {
+    margin: 20px;
+  }
+
+  .Product-Container img {
+    width: 80%;
+  }
+
+  .About {
+    padding: 2em;
+  }
+
+  .Stats {
+    text-align: center;
+  }
+
+  .Stats-Grid div {
+    width: 100%;
+    margin-top: 2em;
+  }
+
+  .Stats span {
+    font-size: 24px;
+  }
+
+  .Outlets {
+    display: block;
+    margin-top: 80px !important;
+  }
+
+  .Contact {
+    padding: 2em;
+  }
+
+  .Contact div {
+    width: 100%;
+    margin-top: 0px;
+  }
+}
+
+
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+::-webkit-scrollbar {
+  width: 1px;
+}
