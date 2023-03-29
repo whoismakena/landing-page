@@ -35,16 +35,20 @@
   position: fixed;
   width: 100%;
   height: 60px;
+  z-index: 10;
+  background-color: transparent;
+  transition: background-color 200ms linear;
 }
 
 .Header span {
   margin-right: 1.5em;
   cursor: pointer;
   color: #f4f9f9;
+  font-weight: bold;
 }
 
 .Header span:hover {
-  color: #527da3;
+  color: #ffffff99;
 }
 
 .Content {
@@ -92,15 +96,13 @@
 .Product-Container img {
   height: auto;
   width: 35em;
-  animation: fade-right 1s ease-in;
 }
 
 .Tag {
-  min-height: 10em;
+  min-height: 9em;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: fade-bottom 1s ease-in;
 }
 
 .Tag span {
@@ -110,10 +112,13 @@
   font-weight: bold;
   display: block;
   letter-spacing: 0.2em;
+  width: 80%;
 }
 
 .About {
   padding: 5em;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .About span {
@@ -125,11 +130,15 @@
   background-image: linear-gradient(#0e1116, #2ec2e2);
   min-height: 20em;
   display: block;
-  animation: fade-bottom 1s ease-in;
+}
+
+.Stats-Grid {
+  width: 80% !important;
+  margin: 0 auto;
 }
 
 .Stats-Grid div {
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .Stats span {
@@ -144,7 +153,7 @@
 }
 
 .Number {
-  font-size: 60px !important;
+  font-size: 3em !important;
   font-weight: bold !important;
 }
 
@@ -279,28 +288,6 @@
   }
 }
 
-
-@keyframes fade-bottom {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-right {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 ::-webkit-scrollbar {
   width: 1px;
 }

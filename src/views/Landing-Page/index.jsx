@@ -1,9 +1,12 @@
 import { Grid } from "@mui/material";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import AOS from "aos";
 import "../../styles/App.css";
+import "aos/dist/aos.css";
 
 export default function LandingPage() {
   const [email, setEmail] = useState("");
+  const [colorChange, setColorchange] = useState(false);
   const homeSection = useRef(null);
   const aboutSection = useRef(null);
   const outletsSection = useRef(null);
@@ -16,8 +19,16 @@ export default function LandingPage() {
   const scrollDown = (ref) => {
     window.scrollTo({
       top: ref.current.offsetTop,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
+  };
+
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 100) {
+      setColorchange(true);
+    } else {
+      setColorchange(false);
+    }
   };
 
   const outlets = [
@@ -53,36 +64,72 @@ export default function LandingPage() {
     },
   ];
 
+  window.addEventListener("scroll", changeNavbarColor);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="App-Container">
-      <div className="Header">
-      <span onClick={() => scrollDown(homeSection)}>Home</span>
-      <span onClick={() => scrollDown(aboutSection)}>About</span>
+      <div
+        className="Header"
+        style={
+          colorChange
+            ? {
+                backgroundColor: "#0E1116",
+                transition: "background-color 500ms linear",
+              }
+            : null
+        }
+      >
+        <span onClick={() => scrollDown(homeSection)}>Home</span>
+        <span onClick={() => scrollDown(aboutSection)}>About</span>
         <span onClick={() => scrollDown(outletsSection)}>Outlets</span>
         <span onClick={() => scrollDown(contactSection)}>Contact</span>
       </div>
-      <Grid container className="Content" ref={homeSection}>
-        <Grid item md={12} lg={6} className="Details-Container">
-          <div>
-            <span className="Title">HANGOVER</span>
-            <span className="Title Tea">TEA</span>
-            <span className="Subtitle">
-              Having a terrible hangover after a fun night out? Kick off the day
-              on a clean slate with an uplifting mix of green tea, ginger and
-              calming mint. We all deserve a second chance.
-            </span>
-          </div>
+      <div>
+        <Grid container className="Content" ref={homeSection}>
+          <Grid item md={12} lg={6} className="Details-Container">
+            <div>
+              <span className="Title">HANGOVER</span>
+              <span className="Title Tea">TEA</span>
+              <span className="Subtitle">
+                Having a terrible hangover after a fun night out? Kick off the
+                day on a clean slate with an uplifting mix of green tea, ginger
+                and calming mint. We all deserve a second chance.
+              </span>
+            </div>
+          </Grid>
+          <Grid item md={12} lg={6} className="Product-Container">
+            <img
+              src={require("../../assets/tea.png")}
+              alt="tea"
+              data-aos="fade-left"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="1500"
+            />
+          </Grid>
         </Grid>
-        <Grid item md={12} lg={6} className="Product-Container">
-          <img src={require("../../assets/tea.png")} alt="tea" />
-        </Grid>
-      </Grid>
-      <div className="Tag Tea">
+      </div>
+
+      <div
+        className="Tag Tea"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+      >
         <span>
           DELETE, FAST FORWARD AND HIT PLAY TO TEAOFF THE TASKS OF THE DAY
         </span>
       </div>
-      <div className="About" ref={aboutSection}>
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        className="About"
+        ref={aboutSection}
+      >
+        <h1>About Tea Variant</h1>
         <span className="Tea-Desc">
           Kericho Gold is a special blend of fine teas from some of the best tea
           estates in Kenya; carefully selected weekly by expert Tea Tasters for
@@ -93,12 +140,12 @@ export default function LandingPage() {
           no artificial colors or preservatives, just the great tasting flavors.
         </span>
         <span className="Tea-Desc Tea">
-          Our premium Hangover tea range includes green tea, mint, and ginger as
+          The premium Hangover tea range includes green tea, mint, and ginger as
           the main ingredients.
         </span>
         <span className="Tea-Desc">
-          Each sip refreshes and hydrates the body, brings in clarity, and
-          soothes the mind and body
+          Each sip refreshes and hydrates the body, brings in clarity and
+          soothes the mind and body.
         </span>
         <span className="Tea-Desc Tea">
           Ideal Partner: Passionate, adventurous, willing to try something new
@@ -118,10 +165,15 @@ export default function LandingPage() {
           </Grid>
           <Grid item sm={4} lg={4} className="Flex">
             <img src={require("../../assets/tea-bag.png")} alt="tea" />
-            <span>Individually wrapped Tea Bags</span>
+            <span>Individually wrapped</span>
           </Grid>
         </Grid>
-        <div className="Outlets" ref={outletsSection}>
+        <div
+          className="Outlets"
+          ref={outletsSection}
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+        >
           {outlets.map((outlet, index) => (
             <img
               key={outlet.title}
