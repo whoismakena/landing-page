@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/landing-page/static/css/main.04662126.css",
-    "main.js": "/landing-page/static/js/main.a3514f31.js",
+    "main.css": "/landing-page/static/css/main.c4dafb33.css",
+    "main.js": "/landing-page/static/js/main.bc3499d4.js",
     "static/js/27.b78f48ef.chunk.js": "/landing-page/static/js/27.b78f48ef.chunk.js",
     "static/media/tea.png": "/landing-page/static/media/tea.2b4f2639a421ad8c19ff.png",
     "static/media/carrefour.png": "/landing-page/static/media/carrefour.952ae301cefff436cb9e.png",
@@ -12,7 +12,7 @@
     "index.html": "/landing-page/index.html"
   },
   "entrypoints": [
-    "static/css/main.04662126.css",
-    "static/js/main.a3514f31.js"
+    "static/css/main.c4dafb33.css",
+    "static/js/main.bc3499d4.js"
   ]
 }
