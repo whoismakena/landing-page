@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/landing-page/static/css/main.c4dafb33.css",
-    "main.js": "/landing-page/static/js/main.bc3499d4.js",
+    "main.css": "/landing-page/static/css/main.dcc39599.css",
+    "main.js": "/landing-page/static/js/main.3fec015a.js",
     "static/js/27.b78f48ef.chunk.js": "/landing-page/static/js/27.b78f48ef.chunk.js",
+    "static/media/tea.gif": "/landing-page/static/media/tea.f403f03adcc4f81d444a.gif",
     "static/media/tea.png": "/landing-page/static/media/tea.2b4f2639a421ad8c19ff.png",
     "static/media/carrefour.png": "/landing-page/static/media/carrefour.952ae301cefff436cb9e.png",
+    "static/media/background-1.png": "/landing-page/static/media/background-1.252df6688f3c8558e07a.png",
     "static/media/Fontspring-DEMO-cerapro-regular.otf": "/landing-page/static/media/Fontspring-DEMO-cerapro-regular.bed562eda7457ec36333.otf",
     "static/media/tea-bag.png": "/landing-page/static/media/tea-bag.028dd2bf13b4db82af59.png",
-    "static/media/background.png": "/landing-page/static/media/background.c2c38124908266fb1703.png",
     "static/media/fair.png": "/landing-page/static/media/fair.c8ba8741e456226d29a4.png",
     "index.html": "/landing-page/index.html"
   },
   "entrypoints": [
-    "static/css/main.c4dafb33.css",
-    "static/js/main.bc3499d4.js"
+    "static/css/main.dcc39599.css",
+    "static/js/main.3fec015a.js"
   ]
 }
