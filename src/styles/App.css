@@ -37,23 +37,21 @@
   height: 60px;
   z-index: 10;
   background-color: transparent;
-  transition: background-color 200ms linear;
 }
 
 .Header span {
   margin-right: 1.5em;
   cursor: pointer;
-  color: #f4f9f9;
   font-weight: bold;
-}
-
-.Header span:hover {
-  color: #ffffff99;
+  background: -webkit-linear-gradient(#f4f9f9, #08c4e7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .Content {
   min-height: 100vh;
-  background-image: url("../assets/background.png");
+  background-image: url("../assets/background-1.png");
   background-size: cover;
 }
 
@@ -76,7 +74,7 @@
 }
 
 .Tea {
-  color: #2ec2e2;
+  color: #0bcef2;
 }
 
 .Tea-Desc {
@@ -96,6 +94,11 @@
 .Product-Container img {
   height: auto;
   width: 35em;
+  transition: 0.5s all ease-in-out;
+}
+
+.Product-Container img:hover {
+  transform: scale(1.2);
 }
 
 .Tag {
@@ -126,8 +129,8 @@
 }
 
 .Stats {
-  background-color: #2ec2e2;
-  background-image: linear-gradient(#0e1116, #2ec2e2);
+  background-color: #0b8da5;
+  background-image: linear-gradient(#0b8da5, #1b2b34);
   min-height: 20em;
   display: block;
 }
@@ -173,6 +176,11 @@
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
+  transition: 0.5s all ease-in-out;
+}
+
+.Outlets img:hover {
+  transform: scale(1.2);
 }
 
 .Contact {
@@ -185,7 +193,7 @@
   align-items: center;
   justify-content: center;
   background-color: #f4f9f9;
-  color: #0e1116;
+  color: #1b2b34;
   height: 55px;
   width: 30%;
   border-radius: 5px;
@@ -208,7 +216,7 @@
 }
 
 .Contact-Button {
-  background-color: #0e1116 !important;
+  background-color: #848c90 !important;
   width: 30% !important;
   color: #f4f9f9 !important;
   cursor: pointer;
@@ -219,6 +227,7 @@
   font-size: 14px;
   padding: 10px 20px;
   text-align: right;
+  background-color: #1b2b34;
 }
 
 @media only screen and (max-width: 780px) {
@@ -227,7 +236,7 @@
   }
 
   .Header {
-    background-color: #0e1116;
+    background-color: #1b2b34;
     margin-right: 10px;
   }
 
@@ -278,6 +287,10 @@
     margin-top: 80px !important;
   }
 
+  .Outlets img {
+    margin-left: 2px;
+  }
+
   .Contact {
     padding: 2em;
   }
@@ -289,5 +302,5 @@
 }
 
 ::-webkit-scrollbar {
-  width: 1px;
+  width: 0px;
 }
